@@ -11,7 +11,8 @@ defmodule HelloCrawler do
            |> Enum.map(&URI.merge(url, &1))
            |> Enum.map(&to_string/1)
            |> Enum.reject(&Enum.member?(path, &1))
-           |> Enum.map(&get_links(URI.parse(&1), host, [&1 | path]))
+           |> Enum.map(&(Task.async(fn -> get_links(URI.parse(&1), host, [&1 | path]) end)))
+           |> Enum.map(&Task.await/1)
            |> List.flatten]
   end
 
