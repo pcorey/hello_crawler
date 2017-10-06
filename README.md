@@ -2,20 +2,24 @@
 
 **TODO: Add description**
 
-## Installation
+## Instructions
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `hello_crawler` to your list of dependencies in `mix.exs`:
+First, clone the `hello_crawler` project onto your machine and `cd` into the new `hello_crawler` directory:
 
-```elixir
-def deps do
-  [
-    {:hello_crawler, "~> 0.1.0"}
-  ]
-end
+```
+git clone https://github.com/pcorey/hello_crawler && cd hello_crawler
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/hello_crawler](https://hexdocs.pm/hello_crawler).
+Fire up an interactive Elixir shell:
 
+```
+iex -S mix
+```
+
+And try crawling over any page you want:
+
+```elixir
+HelloCrawler.get_links("http://www.east5th.co/")
+```
+
+The maximum depth of the crawl can be configured by changing the `@max_depth` attribute in the `HelloCrawler` module.
