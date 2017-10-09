@@ -1,3 +1,5 @@
+![GitHub Logo](https://s3-us-west-1.amazonaws.com/www.east5th.co/img/hello-crawler.png)
+
 # HelloCrawler
 
 This project is a companion to the [Learning to Crawl - Building a Bare Bones Web Crawler with Elixir](#) article. `HelloCrawler` is not intended to be used as an out-of-the-box crawler solution and is most definitely not production ready.
