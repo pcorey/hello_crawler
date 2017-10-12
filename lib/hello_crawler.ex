@@ -9,7 +9,7 @@ defmodule HelloCrawler do
     context = %{
       max_depth: Keyword.get(opts, :max_depth, @default_max_depth),
       headers: Keyword.get(opts, :headers, @default_headers),
-      options: Keyword.get(opts, :headers, @default_options),
+      options: Keyword.get(opts, :options, @default_options),
       host: url.host
     }
     get_links(url, [], context)
